@@ -14,7 +14,6 @@
 
                     <!-- New Task Form -->
                     <form action="{{ url('task')}}" method="POST" class="form-horizontal">
-                        {{ csrf_field() }}
 
                         <!-- Task Name -->
                         <div class="form-group">
@@ -58,7 +57,6 @@
                                         <!-- Task Delete Button -->
                                         <td>
                                             <form action="{{ url('task/'.$task->id) }}" method="POST">
-                                                {{ csrf_field() }}
                                                 {{ method_field('DELETE') }}
 
                                                 <button type="submit" class="btn btn-danger">
